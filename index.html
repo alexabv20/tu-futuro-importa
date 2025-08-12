@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Registro — JC Monclova</title>
+<style>
+:root{
+  --accent:#4CAF50; /* Verde suave */
+  --bg:#FAF6F1; /* Beige/tierra claro */
+  --card:#ffffff;
+  --text:#3E2C1C; /* Marrón oscuro */
+}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{
+  max-width:640px;
+  margin:24px auto;
+  padding:16px;
+}
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:18px;
+  box-shadow:0 6px 18px rgba(62,44,28,0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn{
+  from{opacity:0; transform: translateY(10px);}
+  to{opacity:1; transform: translateY(0);}
+}
+h1{
+  margin:0 0 8px;
+  font-size:22px;
+}
+p.lead{
+  margin:0 0 14px;
+  color:#5C4A3F;
+  font-size:15px;
+}
+.logo{
+  text-align:right;
+}
+.logo img{
+  max-width:80px;
+  height:auto;
+}
+.form-row{
+  margin-bottom:12px;
+}
+label{
+  display:block;
+  font-size:13px;
+  margin-bottom:6px;
+  color:var(--text);
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #d9c9b3;
+  border-radius:8px;
+  font-size:15px;
+  box-sizing:border-box;
+}
+textarea{
+  min-height:96px;
+  resize:vertical;
+}
+button{
+  display:inline-block;
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:0;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+  font-size:16px;
+  transition: background 0.3s ease;
+}
+button:hover{
+  background:#3b9d40;
+}
+small{
+  color:#7b6b5a;
+  display:block;
+  margin-top:8px;
+  font-size:12px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="logo">
+      <img src="img/prudential-logo.png" alt="Prudential">
+    </div>
+    <h1>¿Interesado en tu futuro?</h1>
+    <p class="lead">El futuro no se improvisa, se planea.  
+    Tómate <strong>1 minuto</strong> para dar el primer paso hacia la seguridad de tu patrimonio y el bienestar de tu familia.</p>
+
+    <form action="https://formsubmit.co/alexabv20@outlook.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo registro desde QR">
+      <input type="hidden" name="_next" value="https://TU-USUARIO.github.io/formulario-jcmonclova/gracias.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="form-row">
+        <label for="name">Nombre completo</label>
+        <input id="name" name="name" type="text" required placeholder="Ej. María Pérez">
+      </div>
+
+      <div class="form-row">
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" required placeholder="tucorreo@ejemplo.com">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Teléfono (opcional)</label>
+        <input id="phone" name="phone" type="tel" placeholder="+52 1 55 5555 5555">
+      </div>
+
+      <div class="form-row">
+        <label for="q1">¿Qué te gustaría mejorar de tu futuro?</label>
+        <select id="q1" name="q1" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Ahorro y retiro">Ahorro y retiro</option>
+          <option value="Protección y seguros">Protección y seguros</option>
+          <option value="Educación/universidad">Educación/universidad</option>
+          <option value="Emprendimiento e inversión">Emprendimiento e inversión</option>
+          <option value="Blindar mi negocio/patrimonio">Blindar mi negocio/patrimonio</option>
+          <option value="Estrategia fiscal (solo dueños de negocios consolidados)">Estrategia fiscal (solo dueños de negocios consolidados)</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="q2">¿Quieres que te contactemos?</label>
+        <select id="q2" name="q2" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Sí">Sí</option>
+          <option value="No, sólo información">No, sólo información</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="q3">Comentario breve (opcional)</label>
+        <textarea id="q3" name="q3" placeholder="¿Algo que debamos saber?"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label>
+          <input type="checkbox" name="consent" value="Sí" required>
+          Autorizo a JC Monclova a usar los datos proporcionados para contactarme con información relacionada con asesoría financiera.
+        </label>
+        <small>No venderemos tus datos ni los compartiremos con terceros para fines de venta.</small>
+      </div>
+
+      <button type="submit">Enviar y recibir información</button>
+    </form>
+
+  </div>
+</div>
+</body>
+</html>
